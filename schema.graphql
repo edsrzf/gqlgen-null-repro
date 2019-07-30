@@ -1,0 +1,11 @@
+type Todo {
+  user: User!
+}
+
+type User {
+  name: String!
+}
+
+type Query {
+  todos: [Todo!]!
+}
