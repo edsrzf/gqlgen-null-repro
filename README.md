@@ -1,4 +1,4 @@
-This is a small reproduction case for a bug in gqlgen 0.9.1, where null values are not bubbling up correctly through arrays of non-nullable elements.
+This is a small reproduction case for [a bug in gqlgen 0.9.1](https://github.com/99designs/gqlgen/issues/811), where null values are not bubbling up correctly through arrays of non-nullable elements.
 
 To reproduce the bug, run:
 
@@ -14,4 +14,4 @@ You should see:
 {"errors":[{"message":"oh no","path":["todos",0,"user"]}],"data":{"todos":[null]}}
 ```
 
-The part to focus on is `"todos":[null]`, which should not be allowed according to the schema.
+The part to focus on is `"todos":[null]`, which should not be allowed [according to the schema](https://github.com/edsrzf/gqlgen-null-repro/blob/master/schema.graphql#L10).
